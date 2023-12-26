@@ -107,15 +107,15 @@ class ProjectInput {
       minLength: 5,
     };
     const peopleValidatable: Validatable = {
-      value: +enteredDescription,
+      value: +enteredPeople,
       required: true,
       min: 1,
       max: 5,
     };
 
     if (
-      !validate(titleValidatable) &&
-      !validate(descriptionValidatable) &&
+      !validate(titleValidatable) ||
+      !validate(descriptionValidatable) ||
       !validate(peopleValidatable)
     ) {
       alert("Invalid input - Please try again!");
